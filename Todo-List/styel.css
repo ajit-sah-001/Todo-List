@@ -1,0 +1,331 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* Full Page Styling */
+body {
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    transition: 0.4s;
+}
+
+/* Main Container */
+.container {
+    width: 40%;
+    min-height: 550px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 24px;
+    padding: 32px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(255, 255, 255, 0.1) inset;
+    text-align: center;
+    transition: 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.container:hover {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(255, 255, 255, 0.1) inset;
+    transform: translateY(-5px);
+}
+
+/* Title Styling */
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #2c3e50, #4a69bd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Form Area */
+.form-area {
+    margin-bottom: 28px;
+}
+
+.form-area form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+}
+
+/* Input Fields */
+.form-area input {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    color: #2c3e50;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-area input::placeholder {
+    color: #7f8c8d;
+    opacity: 0.7;
+}
+
+.form-area input:focus {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 3px rgba(74, 105, 189, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Add Button */
+.form-area button {
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 16px;
+    border: none;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 117, 252, 0.3);
+}
+
+.form-area button:hover {
+    background: linear-gradient(135deg, #5a0fc3, #1a68f3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 117, 252, 0.4);
+}
+
+.form-area button:active {
+    transform: translateY(1px);
+}
+
+/* Todo List */
+.todos-area {
+    width: 100%;
+    text-align: center;
+}
+
+/* List Items */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.5);
+    margin: 14px auto;
+    padding: 16px 20px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+    border-left: 4px solid #6a11cb;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.65);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.task-text {
+    flex-grow: 1;
+    text-align: left;
+    margin-right: 10px;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.buttons-group {
+    display: flex;
+    gap: 8px;
+}
+
+/* Buttons - Delete & Edit */
+li button {
+    font-size: 15px;
+    border-radius: 12px;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: linear-gradient(135deg, #ff4d4d, #f9214a);
+    color: white;
+    box-shadow: 0 4px 10px rgba(249, 33, 74, 0.25);
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #ff3333, #e01b3f);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(249, 33, 74, 0.35);
+}
+
+/* Edit Button */
+.edit-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.25);
+}
+
+.edit-btn:hover {
+    background: linear-gradient(135deg, #2980b9, #1c6ca1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(52, 152, 219, 0.35);
+}
+
+/* Delete All Button */
+.delete-all {
+    width: 50%;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 16px;
+    border: none;
+    background: linear-gradient(135deg, #ff4d4d, #f9214a);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 24px;
+    box-shadow: 0 6px 16px rgba(249, 33, 74, 0.25);
+}
+
+.delete-all:hover {
+    background: linear-gradient(135deg, #ff3333, #e01b3f);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(249, 33, 74, 0.35);
+}
+
+.delete-all:active {
+    transform: translateY(1px);
+}
+
+/* Completed Task Styling */
+li.completed .task-text {
+    text-decoration: line-through;
+    color: #95a5a6;
+    font-style: italic;
+}
+
+li.completed {
+    border-left: 4px solid #95a5a6;
+    opacity: 0.8;
+}
+
+/* Empty State */
+.empty-state {
+    color: #7f8c8d;
+    margin-top: 40px;
+    font-style: italic;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.dark-mode .container {
+    background: rgba(30, 39, 46, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode h1 {
+    background: linear-gradient(135deg, #a7d7f9, #74b9ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.dark-mode input {
+    background: rgba(45, 52, 54, 0.7);
+    color: #ecf0f1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode input::placeholder {
+    color: #b2bec3;
+}
+
+.dark-mode input:focus {
+    background: rgba(45, 52, 54, 0.9);
+}
+
+.dark-mode li {
+    background: rgba(45, 52, 54, 0.7);
+    border-left: 4px solid #74b9ff;
+}
+
+.dark-mode .task-text {
+    color: #ecf0f1;
+}
+
+.dark-mode li.completed {
+    border-left: 4px solid #636e72;
+}
+
+.dark-mode li.completed .task-text {
+    color: #636e72;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 85%;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .delete-all {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 24px 16px;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    li {
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+    
+    li button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .delete-all {
+        width: 90%;
+    }
+}
